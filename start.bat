@@ -1,0 +1,9 @@
+@echo off
+echo Starting AutoCaption App...
+IF NOT EXIST "node_modules\" (
+    echo Installing dependencies (this might take a few minutes)...
+    npm install express multer fluent-ffmpeg groq-sdk cors dotenv --no-audit --no-fund
+)
+echo Starting server...
+node server.js
+pause
